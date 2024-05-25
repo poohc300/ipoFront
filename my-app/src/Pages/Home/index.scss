@@ -1,0 +1,22 @@
+/* home.scss */
+.home {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    .header {
+
+        padding: 1rem;
+    }
+
+    .sidebar {
+
+        padding: 1rem;
+        width: 250px;
+    }
+
+    .content {
+        flex: 1;
+        padding: 1rem;
+    }
+}
