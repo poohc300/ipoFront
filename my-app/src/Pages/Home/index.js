@@ -3,10 +3,12 @@ import Typography from '@mui/material/Typography';
 
 const Home = () => {
     return (
-        <div style={{ padding: 20 }}>
-            <Typography variant="h3">Home Page</Typography>
+        <div>
+            <Typography variant="h3" gutterBottom>
+                Home Page
+            </Typography>
             <Typography>
-                Welcome to the Home page of IPO Analysis. Here you can provide an overview or introductory content.
+                Welcome to the Home page of your application. You can add your content here.
             </Typography>
         </div>
 
