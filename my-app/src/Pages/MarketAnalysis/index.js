@@ -3,7 +3,7 @@ import Typography from '@mui/material/Typography';
 
 const MarketAnalysis = () => {
   return (
-    <div style={{ padding: 20 }}>
+    <div id='marketAnalysis'>
       <Typography variant="h3">Market Analysis Page</Typography>
       <Typography>
         Explore market trends, stock performance, and analysis of various financial markets.

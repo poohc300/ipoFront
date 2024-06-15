@@ -1,9 +1,9 @@
 import React from "react";
 import Typography from '@mui/material/Typography';
 
-const IpoInfo = () => {
+const IpoAnalysis = () => {
     return (
-        <div style={{ padding: 20 }}>
+        <div id="ipoAnalysis">
             <Typography variant="h3">IPO Analysis Page</Typography>
             <Typography>
                 This page could contain detailed analysis of recent IPOs, market trends, and investment insights.
@@ -12,4 +12,4 @@ const IpoInfo = () => {
 
     )
 }
-export default IpoInfo
+export default IpoAnalysis

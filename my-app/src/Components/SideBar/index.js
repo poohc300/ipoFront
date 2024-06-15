@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 import Drawer from '@mui/material/Drawer';
 import { Toolbar } from "@mui/material";
 import Divider from '@mui/material/Divider';
@@ -13,7 +14,27 @@ import MailIcon from '@mui/icons-material/Mail';
 const drawerWidth = 240;
 
 const SideBar = () => {
+    const navigate = useNavigate();
 
+    const handleClick = (text) => {
+        switch (text) {
+            case 'IPO 분석 홈':
+                navigate('/');
+                break;
+            case '공모주 분석':
+                navigate('/ipoAnalysis');
+                break;
+            case '시세 분석':
+                navigate('/marketAnalysis');
+                break;
+            case '이슈 분석':
+                navigate('/issueAnalysis');
+                break;
+
+            default:
+                break;
+        }
+    }
     return (
         <div id="sidebar">
             <Drawer
@@ -31,9 +52,11 @@ const SideBar = () => {
                 <Toolbar />
                 <Divider />
                 <List>
-                    {['공모주 분석', '시세 분석', '이슈 분석', '뉴스'].map((text, index) => (
+                    {['IPO 분석 홈', '공모주 분석', '시세 분석', '이슈 분석'].map((text, index) => (
                         <ListItem key={text} disablePadding>
-                            <ListItemButton>
+                            <ListItemButton onClick={() => {
+                                handleClick(text)
+                            }}>
                                 <ListItemIcon>
                                     {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
                                 </ListItemIcon>

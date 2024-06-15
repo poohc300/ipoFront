@@ -3,7 +3,7 @@ import Typography from '@mui/material/Typography';
 
 const Home = () => {
     return (
-        <div>
+        <div id='home'>
             <Typography variant="h3" gutterBottom>
                 Home Page
             </Typography>
