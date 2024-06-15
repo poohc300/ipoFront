@@ -12,10 +12,11 @@ const PageContainer = ({ children, maxWidth = '100%', maxHeight = '100%' }) => {
                 maxHeight, // 최대 높이를 props로 전달된 값으로 설정합니다.
                 mx: 'auto', // 가운데 정렬을 위해 좌우 마진을 자동으로 설정합니다.
                 p: 1, // 안쪽 패딩을 설정합니다.
-                bgcolor: '#f5f7f9', // 배경색을 지정합니다.
+                //bgcolor: '#f5f7f9', // 배경색을 지정합니다.
                 overflowY: 'auto', // Y축 스크롤이 필요할 경우 스크롤바를 추가합니다.
                 display: 'flex', // 자식 요소를 가로로 배치하기 위해 flex display를 설정합니다.
                 flexDirection: 'column', // 자식 요소를 세로 방향으로 배치합니다.
+                gap: 1, // 자식 요소 사이의 간격을 설정합니다.
             }}
         >
             {children}

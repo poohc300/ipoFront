@@ -13,21 +13,24 @@ function App() {
     <BrowserRouter>
       <Box sx={{ display: 'flex', flexDirection: 'row', marginTop: '64px' }}>
         <Header />
-        <SideBar />
-        {/* <Box sx={{ display: 'flex', flexDirection: 'column', flexGrow: 1 }}> */}
-
-        <PageContainer >
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path='/ipoAnalysis' element={<IpoAnalysis />} />
-            <Route path='/marketAnalysis' element={<MarketAnalysis />} />
-            <Route path='/issueAnalysis' element={<IssueAnalysis />} />
-          </Routes>
-        </PageContainer>
+        <Box sx={{ display: 'flex', flexGrow: 1 }}>
+          <SideBar />
+          <PageContainer
+            sx={{
+              maxWidth: '100%', maxHeight: '100%', overflow: 'auto',
+              ml: 0, // 왼쪽 여백을 0으로 설정
+              mr: 0, // 오른쪽 여백을 0으로 설정 }}
+            }}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path='/ipoAnalysis' element={<IpoAnalysis />} />
+              <Route path='/marketAnalysis' element={<MarketAnalysis />} />
+              <Route path='/issueAnalysis' element={<IssueAnalysis />} />
+            </Routes>
+          </PageContainer>
+        </Box>
       </Box>
-
-      {/* </Box> */}
-    </BrowserRouter>
+    </BrowserRouter >
   );
 }
 
