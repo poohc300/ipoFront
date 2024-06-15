@@ -31,7 +31,7 @@ const SideBar = () => {
                 <Toolbar />
                 <Divider />
                 <List>
-                    {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+                    {['공모주 분석', '시세 분석', '이슈 분석', '뉴스'].map((text, index) => (
                         <ListItem key={text} disablePadding>
                             <ListItemButton>
                                 <ListItemIcon>
@@ -42,7 +42,7 @@ const SideBar = () => {
                         </ListItem>
                     ))}
                 </List>
-                <Divider />
+                {/* <Divider />
                 <List>
                     {['All mail', 'Trash', 'Spam'].map((text, index) => (
                         <ListItem key={text} disablePadding>
@@ -54,7 +54,7 @@ const SideBar = () => {
                             </ListItemButton>
                         </ListItem>
                     ))}
-                </List>
+                </List> */}
             </Drawer>
 
         </div>

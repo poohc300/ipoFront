@@ -1,19 +1,15 @@
 import React from "react";
-import Header from "../../Components/Header";
-import SideBar from "../../Components/SideBar";
+import Typography from '@mui/material/Typography';
 
 const Home = () => {
     return (
-        <div id='home'>
-            <div id="header">
-                <Header />
-
-            </div>
-            <div id="sidebar">
-                <SideBar />
-
-            </div>
+        <div style={{ padding: 20 }}>
+            <Typography variant="h3">Home Page</Typography>
+            <Typography>
+                Welcome to the Home page of IPO Analysis. Here you can provide an overview or introductory content.
+            </Typography>
         </div>
+
     )
 }
 export default Home

@@ -11,9 +11,9 @@ import MenuIcon from '@mui/icons-material/Menu';
 const Header = () => {
 
     return (
-        <div id="header">
+        <div id="nav">
             <Box sx={{ flexGrow: 1 }}>
-                <AppBar position="static">
+                <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
                     <Toolbar>
                         <IconButton
                             size="large"
@@ -25,7 +25,7 @@ const Header = () => {
                             <MenuIcon />
                         </IconButton>
                         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                            News
+                            IpoNet
                         </Typography>
                         <Button color="inherit">Login</Button>
                     </Toolbar>
