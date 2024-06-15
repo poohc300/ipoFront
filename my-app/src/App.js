@@ -11,21 +11,22 @@ import { Box } from '@mui/material';
 function App() {
   return (
     <BrowserRouter>
-      <Box sx={{ display: 'flex' }}>
+      <Box sx={{ display: 'flex', flexDirection: 'row', marginTop: '64px' }}>
         <Header />
         <SideBar />
-        <Box component="main" sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3 }}>
-          <PageContainer>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path='/ipoAnalysis' element={<IpoAnalysis />} />
-              <Route path='/marketAnalysis' element={<MarketAnalysis />} />
-              <Route path='/issueAnalysis' element={<IssueAnalysis />} />
-            </Routes>
-          </PageContainer>
-        </Box>
+        {/* <Box sx={{ display: 'flex', flexDirection: 'column', flexGrow: 1 }}> */}
 
+        <PageContainer >
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path='/ipoAnalysis' element={<IpoAnalysis />} />
+            <Route path='/marketAnalysis' element={<MarketAnalysis />} />
+            <Route path='/issueAnalysis' element={<IssueAnalysis />} />
+          </Routes>
+        </PageContainer>
       </Box>
+
+      {/* </Box> */}
     </BrowserRouter>
   );
 }
